@@ -26,4 +26,6 @@ st.write(df)
 st.subheader('Test')
 
 df2 = yf.download('BZ=F', interval='1d')
+st.info('1d')
+st.warning(df2.shape)
 st.write(df2)
