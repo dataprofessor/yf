@@ -19,5 +19,5 @@ interv = st.select_slider('Select Time Series Data Interval for Prediction', opt
 
 df = yf.download('BZ=F', interval=getInterval(interv[0]))
 
-st.write(getInterval(interv[0]))
+st.info(getInterval(interv[0]))
 st.write(df)
