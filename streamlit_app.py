@@ -23,7 +23,7 @@ st.info(getInterval(interv[0]))
 st.warning(df.shape)
 st.write(df)
 
-st.subheading('Test')
+st.subheader('Test')
 
 df2 = yf.download('BZ=F', interval='1d')
 st.write(df2)
