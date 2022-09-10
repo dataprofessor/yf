@@ -22,3 +22,8 @@ df = yf.download('BZ=F', interval=getInterval(interv[0]))
 st.info(getInterval(interv[0]))
 st.warning(df.shape)
 st.write(df)
+
+st.subheading('Test')
+
+df2 = yf.download('BZ=F', interval='1d')
+st.write(df2)
