@@ -1,5 +1,22 @@
+# Code snippets from https://github.com/janrswong/testingthesis
+
 import streamlit as st
+import yfinance as yf
 
-st.title('🎈 App Name')
+st.title('🎈 yfinance app')
 
-st.write('Hello world!')
+def getInterval(argument):
+    switcher = {
+        "W": "1wk",
+        "M": "1mo",
+        "Q": "3mo",
+        "D": "1d"
+    }
+    return switcher.get(argument)
+
+interv = st.select_slider('Select Time Series Data Interval for Prediction', options=[
+                          'Weekly', 'Monthly', 'Quarterly', 'Daily'])
+
+df = yf.download('BZ=F', interval=getInterval(interv[0]))
+
+st.write(df)
